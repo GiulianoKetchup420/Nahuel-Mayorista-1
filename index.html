@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nahuel Importador | Perfumes y Tecnología</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome para íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navegación -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h2>Nahuel<span> Importador</span></h2>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#categorias">Categorías</a></li>
+                <li><a href="#catalogo">Catálogo</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Nahuel Importador</h1>
+            <p>Perfumes, productos de alta rotación y mucho más</p>
+            <a href="#catalogo" class="btn-primary">Ver catálogo</a>
+        </div>
+    </section>
+    <!-- Categorías Destacadas -->
+              <div class="categories-grid">
+                <div class="category-card" data-filter="Perfumes 100ml">
+                    <i class="fas fa-spray-can"></i>
+                    <h3>Perfumes 100ml</h3>
+                </div>
+                <div class="category-card" data-filter="Perfumes 50ml">
+                    <i class="fas fa-spray-can"></i>
+                    <h3>Perfumes 50ml</h3>
+                </div>
+                <div class="category-card" data-filter="Perfumes 30ml">
+                    <i class="fas fa-spray-can"></i>
+                    <h3>Perfumes 30ml</h3>
+                </div>
+                <div class="category-card" data-filter="Testers 60ml">
+                    <i class="fas fa-vial"></i>
+                    <h3>Testers 60ml</h3>
+                </div>
+                <div class="category-card" data-filter="Belleza">
+                    <i class="fas fa-heart"></i>
+                    <h3>Belleza</h3>
+                </div>
+                <div class="category-card" data-filter="Vapers">
+                    <i class="fas fa-smoking"></i>
+                    <h3>Vapers</h3>
+                </div>
+                <div class="category-card" data-filter="Parlantes">
+                    <i class="fas fa-volume-up"></i>
+                    <h3>Parlantes</h3>
+                </div>
+                <div class="category-card" data-filter="Apple">
+                    <i class="fab fa-apple"></i>
+                    <h3>Apple</h3>
+                </div>
+                <div class="category-card" data-filter="Otros">
+                    <i class="fas fa-box"></i>
+                    <h3>Otros</h3>
+                </div>
+            </div>
+    </section>
+
+    <!-- Catálogo de Productos -->
+    <section id="catalogo" class="catalog-section">
+        <div class="container">
+            <h2 class="section-title">Catálogo de Productos</h2>
+            
+            <div class="catalog-controls">
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Buscar productos...">
+                    <i class="fas fa-search"></i>
+                </div>
+                
+                                <div class="filters">
+                    <button class="filter-btn active" data-filter="Todos">Todos</button>
+                    <button class="filter-btn" data-filter="Perfumes 100ml">Perfumes 100ml</button>
+                    <button class="filter-btn" data-filter="Perfumes 50ml">Perfumes 50ml</button>
+                    <button class="filter-btn" data-filter="Perfumes 30ml">Perfumes 30ml</button>
+                    <button class="filter-btn" data-filter="Testers 60ml">Testers 60ml</button>
+                    <button class="filter-btn" data-filter="Belleza">Belleza</button>
+                    <button class="filter-btn" data-filter="Vapers">Vapers</button>
+                    <button class="filter-btn" data-filter="Parlantes">Parlantes</button>
+                    <button class="filter-btn" data-filter="Apple">Apple</button>
+                    <button class="filter-btn" data-filter="Otros">Otros</button>
+                </div>
+            </div>
+                            <div class="brands-section">
+                    <h3 class="brands-title">Marcas de Perfumes</h3>
+                    <div class="brand-filters">
+                        <button class="brand-btn active" data-brand="Todas">Todas</button>
+                        <button class="brand-btn" data-brand="Jean Paul Gaultier">Jean Paul Gaultier</button>
+                        <button class="brand-btn" data-brand="Afnan">Afnan</button>
+                        <button class="brand-btn" data-brand="Al Haramain">Al Haramain</button>
+                        <button class="brand-btn" data-brand="Armaf">Armaf</button>
+                        <button class="brand-btn" data-brand="Bharara">Bharara</button>
+                        <button class="brand-btn" data-brand="Rasasi">Rasasi</button>
+                    </div>
+                </div>
+
+            <!-- Contenedor donde se inyectan los productos con JS -->
+            <div class="products-grid" id="productsGrid">
+                <!-- Los productos aparecerán aquí -->
+            </div>
+        </div>
+    </section>
+
+  <!-- Sección de Información (Enfoque Mayorista) -->
+    <section class="info-section">
+        <div class="container">
+            <div class="info-content">
+                <h2>¿Por qué elegir Nahuel Importador?</h2>
+                <p>Potenciá tu negocio con nosotros. Nos especializamos en proveer perfumes, tecnología y accesorios de alta rotación para locales y revendedores. Te garantizamos precios mayoristas altamente competitivos, atención personalizada y la rentabilidad que tu emprendimiento necesita para crecer. Abastecé tu tienda con los productos más buscados del mercado.</p>
+            </div>
+        </div>
+    </section>
+
+  <!-- Contacto -->
+    <section id="contacto" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Contacto</h2>
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <i class="fab fa-whatsapp"></i>
+                    <h3>WhatsApp</h3>
+                    <p>+54 9 3865 389429</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-instagram"></i>
+                    <h3>Instagram</h3>
+                    <p><a href="https://instagram.com/nahuelimportador" target="_blank" style="color: var(--text-muted); text-decoration: none;">@nahuelimportador</a></p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-clock"></i>
+                    <h3>Horarios</h3>
+                    <p>Lun a Sáb: 09:00 a 13:00 y 17:00 a 21:00</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Ubicación</h3>
+                    <p>Concepción, Tucumán</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-logo">
+                <h2>NAHUEL<span> IMPORTADOR</span></h2>
+                <p>Perfumes y tecnología a tu alcance.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Enlaces</h3>
+                <a href="#inicio">Inicio</a>
+                <a href="#catalogo">Catálogo</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+            <div class="footer-social">
+                <h3>Seguinos</h3>
+                <a href="https://instagram.com/nahuelimportador" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+            </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Nahuel Importador. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/5493865389429?text=Hola%20Nahuel%20Importador,%20vengo%20desde%20la%20página%20web%20y%20quiero%20hacer%20una%20consulta." class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -13,51 +13,199 @@ const products = [
         image: "img/BlueRazzIce.jpg",
         available: true
     },
-    {
-        id: 6,
-        name: "Perfume Hawas Atlantis",
-        category: "Perfumes 100ml", // Cambiá por la categoría que prefieras
-        brand: "Rasasi",
-        price: "$0", // Poné el precio real
-        wholesale: [],
-        image: "img/HawasAtlantis.jpg", // Ajustá la extensión si es .jpg o .jpeg
-        available: true
-    },
-    {
-        id: 7,
-        name: "Perfume Hawas Fire",
-        category: "Perfumes 100ml",
-        brand: "Rasasi",
-        price: "$0",
-        wholesale: [],
-        image: "img/HawasFire.jpg",
-        available: true
-    },
-    {
-        id: 8,
-        name: "Perfume Hawas Ice",
-        category: "Perfumes 100ml",
-        brand: "Rasasi",
-        price: "$0",
-        wholesale: [],
-        image: "img/HawasIce.jpg",
-        available: true
-    },
-    {
+        {
         id: 9,
-        name: "Perfume Hawas Pink",
+        name: "Afnan 9pm",
         category: "Perfumes 100ml",
-        brand: "Rasasi",
-        price: "$0",
-        wholesale: [],
-        image: "img/HawasPink.jpg",
+        marca: "Afnan",
+        minQty: 3, minPrice: "$45.000",
+        price: "Consultar precio",
+        image: "img/Afnaf9pm100ml.jpg",
         available: true
     },
     {
         id: 10,
+        name: "Afnan 9pm Night Out",
+        category: "Perfumes 100ml",
+        marca: "Afnan",
+        minQty: 3, minPrice: "$45.000",
+        price: "Consultar precio",
+        image: "img/afnaf9pmnigthout100ml.jpg",
+        available: true
+    },
+    {
+        id: 11,
+        name: "Afnan 9pm Rebel",
+        category: "Perfumes 100ml",
+        marca: "Afnan",
+        minQty: 3, minPrice: "$45.000",
+        price: "Consultar precio",
+        image: "img/afnaf9pmrebel100ml.jpg",
+        available: true
+    },
+    {
+        id: 12,
+        name: "Al Haramain Amber Oud Gold Edition",
+        category: "Perfumes 100ml",
+        marca: "Al Haramain",
+        price: "Consultar precio",
+        image: "img/alharamainambelroudgoldedition.jpg",
+        available: true
+    },
+    {
+        id: 13,
+        name: "Armaf Club de Nuit Intense",
+        category: "Perfumes 100ml",
+        marca: "Armaf",
+        minQty: 3, minPrice: "$50.000",
+        price: "Consultar precio",
+        image: "img/armafclubdenuitintense.jpg",
+        available: true
+    },
+    {
+        id: 14,
+        name: "Asad Bourbon",
+        category: "Perfumes 100ml",
+        marca: "Lattafa",
+        minQty: 3, minPrice: "$37.000",
+        price: "Consultar precio",
+        image: "img/asadbourboun.jpg",
+        available: true
+    },
+    {
+        id: 15,
+        name: "Asad Elixir",
+        category: "Perfumes 100ml",
+        marca: "Lattafa",
+        minQty: 3, minPrice: "$37.000",
+        price: "Consultar precio",
+        image: "img/asadelixir.jpg",
+        available: true
+    },
+    {
+        id: 16,
+        name: "Bharara King",
+        category: "Perfumes 100ml",
+        marca: "Bharara",
+        price: "Consultar precio",
+        image: "img/bhararaking.jpg",
+        available: true
+    },
+    {
+        id: 17,
+        name: "Erba Pura",
+        category: "Perfumes 100ml",
+        marca: "Xerjoff",
+        minQty: 3, minPrice: "$270.000",
+        price: "Consultar precio",
+        image: "img/erbapura.jpg",
+        available: true
+    },
+    {
+        id: 18,
+        name: "Rasasi Hawas Atlantis",
+        category: "Perfumes 100ml",
+        marca: "Rasasi",
+        minQty: 3, minPrice: "$49.000",
+        price: "Consultar precio",
+        image: "img/HawasAtlantis.jpg",
+        available: true
+    },
+    {
+        id: 19,
+        name: "Rasasi Hawas Fire",
+        category: "Perfumes 100ml",
+        marca: "Rasasi",
+        minQty: 3, minPrice: "$49.000",
+        price: "Consultar precio",
+        image: "img/HawasFire.jpg",
+        available: true
+    },
+    {
+        id: 20,
+        name: "Rasasi Hawas Ice",
+        category: "Perfumes 100ml",
+        marca: "Rasasi",
+        minQty: 3, minPrice: "$49.000",
+        price: "Consultar precio",
+        image: "img/Hawasice.jpg",
+        available: true
+    },
+    {
+        id: 21,
+        name: "Rasasi Hawas Pink",
+        category: "Perfumes 100ml",
+        marca: "Rasasi",
+        minQty: 3, minPrice: "$49.000",
+        price: "Consultar precio",
+        image: "img/HawasPink.jpg",
+        available: true
+    },
+    {
+        id: 22,
+        name: "Mandarin Elixir",
+        category: "Perfumes 100ml",
+        marca: "Armaf",
+        price: "Consultar precio",
+        image: "img/mandarinelixir.jpg",
+        available: true
+    },
+    {
+        id: 23,
+        name: "Naxos",
+        category: "Perfumes 100ml",
+        marca: "Xerjoff",
+        minQty: 3, minPrice: "$270.000",
+        price: "Consultar precio",
+        image: "img/naxos.jpg",
+        available: true
+    },
+    {
+        id: 24,
+        name: "Armaf Odyssey Mandarin Sky",
+        category: "Perfumes 100ml",
+        marca: "Armaf",
+        price: "Consultar precio",
+        image: "img/odysseymandarinsky.jpg",
+        available: true
+    },
+    {
+        id: 25,
+        name: "Valentino Uomo Born in Roma",
+        category: "Perfumes 100ml",
+        marca: "Valentino",
+        price: "Consultar precio",
+        image: "img/valentinouomoborninroma.jpg",
+        available: true
+    },
+    {
+        id: 26,
+        name: "Liquid Burn",
+        category: "Perfumes 100ml",
+        marca: "French Avenue",
+        minQty: 3, minPrice: "$55.000",
+        price: "Consultar precio",
+        image: "img/LiquidBurn.jpg",
+        available: true
+    },
+    {
+        id: 27,
+        name: "JBL Pro 4",
+        category: "Parlantes",
+        price: "Consultar precio",
+        image: "img/jblpro4.jpg",
+        available: true
+    },
+   
+    
+
+  
+  {
+        id: 10,
         name: "Perfume Odyssey Mandarin Sky",
         category: "Perfumes 100ml",
         brand: "Armaf",
+        minQty: 3, minPrice: "$46.000",
         price: "$0",
         wholesale: [],
         image: "img/odysseymandarinsky.jpg",
@@ -197,14 +345,35 @@ const generateWALink = (productName) => {
 };
 
 // Renderizado de escala de precios por mayor
+// Renderizado de escala de precios por mayor
 const renderWholesale = (product) => {
     if (product.wholesale && product.wholesale.length > 0) {
-        const tiers = product.wholesale.map(w => 
-            `<p class="price-tier">${w.qty}+ u. → <strong>${w.price}</strong> c/u</p>`
+        const maxTiers = 3;
+        const visibleTiers = product.wholesale.slice(0, maxTiers);
+        const hasMore = product.wholesale.length > maxTiers;
+
+        const tiers = visibleTiers.map(w => 
+            `<div class="price-tier-big">
+                <span class="tier-qty">${w.qty}+ unid.</span>
+                <span class="tier-price">${w.price} <small>c/u</small></span>
+            </div>`
         ).join('');
-        return `<div class="wholesale-prices">${tiers}</div>`;
+
+        const moreNote = hasMore 
+            ? `<p class="more-tiers-note">+ más descuentos llevando mayor cantidad — consultar</p>` 
+            : '';
+
+        return `<div class="wholesale-prices-big">${tiers}</div>${moreNote}`;
     }
-    return '';
+    if (product.minQty && product.minPrice) {
+        return `
+            <div class="min-wholesale">
+                <p class="min-wholesale-price">Mínimo ${product.minQty} unidades: <strong>${product.minPrice}</strong> c/u</p>
+                <p class="wholesale-notice"><i class="fas fa-tag"></i> Llevando más cantidad, el precio mejora aún más — consultar.</p>
+            </div>
+        `;
+    }
+    return `<p class="product-price">${product.price}</p>`;
 };
 
 // Renderizar tarjetas de productos
@@ -231,10 +400,9 @@ const renderProducts = (productsToRender) => {
                 <span class="product-category">${product.category}</span>
                 <h3 class="product-title">${product.name}</h3>
                 
-                <p class="product-price">${product.price}</p>
+                
                 ${renderWholesale(product)}
                 
-                <p class="wholesale-notice"><i class="fas fa-tag"></i> Llevando más de 1 unidad se mejora el precio.</p>
                 <p class="product-status ${statusClass}"><i class="fas fa-circle" style="font-size:8px; vertical-align:middle; margin-right:5px;"></i>${statusText}</p>
                 
                 <a href="${waLink}" target="_blank" class="btn-whatsapp">

@@ -333,8 +333,9 @@ header {
 /* Grid de Productos */
 .products-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
+    align-items: start;
 }
 
 .product-card {
@@ -419,6 +420,59 @@ header {
 .wholesale-notice {
     font-size: 0.8rem;
     color: var(--accent);
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+.wholesale-prices-big {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.price-tier-big {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(212, 175, 55, 0.08);
+    border: 1px solid rgba(212, 175, 55, 0.25);
+    border-radius: 8px;
+    padding: 8px 14px;
+}
+
+.tier-qty {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.tier-price {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--accent);
+}
+
+.tier-price small {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    font-weight: 400;
+}
+.min-wholesale {
+    margin-bottom: 1rem;
+}
+
+.min-wholesale-price {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    margin-bottom: 0.4rem;
+}
+
+.min-wholesale-price strong {
+    color: var(--accent);
+    font-size: 1.4rem;
+}
+.more-tiers-note {
+    font-size: 0.8rem;
+    color: var(--text-muted);
     font-style: italic;
     margin-bottom: 1rem;
 }
@@ -652,5 +706,29 @@ footer {
         width: 50px;
         height: 50px;
         font-size: 25px;
+            .filters, .brand-filters {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        justify-content: flex-start;
+        padding-bottom: 10px;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .filters::-webkit-scrollbar, .brand-filters::-webkit-scrollbar {
+        height: 4px;
+    }
+
+    .filters::-webkit-scrollbar-thumb, .brand-filters::-webkit-scrollbar-thumb {
+        background: var(--accent);
+        border-radius: 10px;
+    }
+
+    .filter-btn, .brand-btn {
+        flex-shrink: 0;
+    }
+
+    .categories-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
     }
 }

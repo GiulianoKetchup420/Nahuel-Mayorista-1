@@ -31,13 +31,24 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="inicio" class="hero">
-        <div class="hero-content">
-            <h1>Nahuel Importador</h1>
-            <p>Perfumes, productos de alta rotación y mucho más</p>
+<section id="inicio" class="hero">
+    <div class="hero-content">
+        <h1>Nahuel Importador</h1>
+        
+        <p class="hero-subtitle">
+            <strong>Mejorá tus costos — Maximizá tus ganancias</strong><br>
+            Pasame el precio que estás pagando y te hago uno mejor.<br>
+            <span>Armamos tu pedido personalizado según tu presupuesto. ¡Podés arrancar con solo $35.000!</span>
+        </p>
+
+        <div class="hero-buttons">
             <a href="#catalogo" class="btn-primary">Ver catálogo</a>
+            <a href="https://wa.me/5493865389429?text=Hola%20Nahuel,%20quiero%20mejorar%20mis%20costos.%20Te%20paso%20lo%20que%20estoy%20pagando:" target="_blank" class="btn-secondary">
+                <i class="fab fa-whatsapp"></i> Mejorar mis costos
+            </a>
         </div>
-    </section>
+    </div>
+</section>
     <!-- Categorías Destacadas -->
               <div class="categories-grid">
                 <div class="category-card" data-filter="Perfumes 100ml">
@@ -117,12 +128,17 @@
                         <button class="brand-btn" data-brand="Xerjoff">Xerjoff</button>
                         <button class="brand-btn" data-brand="Valentino">Valentino</button>
                         <button class="brand-btn" data-brand="French Avenue">French Avenue</button>
+                        <button class="brand-btn" data-brand="Creed">Creed</button>
                     </div>
                 </div>
 
+                <div class="fragances-banner" id="fragancesBanner" style="display:none;">
+                Contamos con más de 50 fragancias disponibles — ¡Consultanos por la que buscás!
+                </div>
             <!-- Contenedor donde se inyectan los productos con JS -->
             <div class="products-grid" id="productsGrid">
                 <!-- Los productos aparecerán aquí -->
+
             </div>
         </div>
     </section>
@@ -188,12 +204,44 @@
             <p>&copy; 2024 Nahuel Importador. Todos los derechos reservados.</p>
         </div>
     </footer>
+        <!-- Ventana flotante "No ves tu perfume" -->
+    <div class="perfume-request-popup" id="perfumeRequestPopup">
+        <button class="popup-close" id="popupClose">&times;</button>
+        <p class="popup-text">¿No ves tu perfume? <strong>¡Contanos y te lo conseguimos!</strong></p>
+        <a href="https://wa.me/5493865389429?text=Hola%20Nahuel%20Importador,%20estoy%20buscando%20un%20perfume%20que%20no%20vi%20en%20el%20cat%C3%A1logo." target="_blank" class="popup-btn">
+            <i class="fab fa-whatsapp"></i> Consultar
+        </a>
+    </div>
 
     <!-- Botón flotante de WhatsApp -->
     <a href="https://wa.me/5493865389429?text=Hola%20Nahuel%20Importador,%20vengo%20desde%20la%20página%20web%20y%20quiero%20hacer%20una%20consulta." class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
+<!-- Botón Flotante del Carrito -->
+    <button class="cart-floating-btn" onclick="toggleCartModal()">
+        <i class="fas fa-shopping-bag"></i>
+        <span id="cartCount" class="cart-badge">0</span>
+    </button>
 
+    <!-- Ventana Modal del Carrito -->
+    <div id="cartModal" class="cart-modal">
+        <div class="cart-modal-content">
+            <div class="cart-modal-header">
+                <h3><i class="fas fa-shopping-cart"></i> Tu Pedido</h3>
+                <button class="cart-close-btn" onclick="toggleCartModal()">&times;</button>
+            </div>
+            
+            <div id="cartItemsList" class="cart-items-list">
+                <!-- Se llena dinámicamente desde JS -->
+            </div>
+
+            <div class="cart-modal-footer">
+                <button onclick="sendOrderToWhatsApp()" class="btn-send-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Enviar Pedido por WhatsApp
+                </button>
+            </div>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

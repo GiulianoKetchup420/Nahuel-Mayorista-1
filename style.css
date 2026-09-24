@@ -803,7 +803,9 @@ footer {
         font-size: 25px;
     }
 
-    .filters, .brand-filters {
+        .filters, .brand-filters {
+        width: 100%;
+        max-width: 100%;
         flex-wrap: nowrap;
         overflow-x: auto;
         justify-content: flex-start;
@@ -1204,4 +1206,54 @@ footer {
 
 .btn-send-whatsapp:hover {
     background-color: #1ebd56;
+}
+/* Media Query para Pantallas Chicas (Celulares) */
+@media (max-width: 768px) {
+    /* Ajuste de márgenes generales para pantallas chicas */
+    body {
+        padding-bottom: 90px; /* Espacio extra para que los botones flotantes no tapen el contenido */
+    }
+
+    /* Modificación del Botón Flotante del Carrito en Celulares */
+    .cart-floating-btn {
+        bottom: 15px;
+        left: 15px;
+        padding: 10px 14px;
+        font-size: 0.95rem;
+    }
+
+    /* Redimensionar el badge del contador */
+    .cart-badge {
+        width: 20px;
+        height: 20px;
+        font-size: 0.7rem;
+    }
+
+    /* Modal del Carrito adaptado a pantallas táctiles */
+    .cart-modal-content {
+        width: 95%;
+        max-width: none;
+        padding: 16px;
+        border-radius: 12px;
+    }
+
+    .cart-items-list {
+        max-height: 220px;
+    }
+
+    .cart-item-name {
+        font-size: 0.85rem;
+        max-width: 50%;
+    }
+
+    .cart-item-controls button {
+        width: 32px; /* Botones más grandes para apretar bien con el pulgar */
+        height: 32px;
+        font-size: 1.1rem;
+    }
+
+    .btn-send-whatsapp {
+        padding: 12px;
+        font-size: 0.95rem;
+    }
 }

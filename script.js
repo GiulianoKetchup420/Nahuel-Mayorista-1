@@ -766,7 +766,7 @@ const products = [
         marca: "Lattafa",
         minQty: 3, minPrice: "$57.000",
         price: "Consultar precio",
-        image: "img/HerConfessionLatafa100ml.jpg",
+        image: "img/HerConfessionLataffa.jpg",
         available: true
     },
     {

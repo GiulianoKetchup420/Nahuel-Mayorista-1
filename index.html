@@ -31,26 +31,30 @@
     </header>
 
     <!-- Hero Section -->
-<section id="inicio" class="hero">
-    <div class="hero-content">
-        <h1>Nahuel Importador</h1>
-        
-        <p class="hero-subtitle">
-            <strong>Mejorá tus costos — Maximizá tus ganancias</strong><br>
-            Pasame el precio que estás pagando y te hago uno mejor.<br>
-            <span>Armamos tu pedido personalizado según tu presupuesto. ¡Podés arrancar con solo $35.000!</span>
-        </p>
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Nahuel Importador</h1>
 
-        <div class="hero-buttons">
-            <a href="#catalogo" class="btn-primary">Ver catálogo</a>
-            <a href="https://wa.me/5493865389429?text=Hola%20Nahuel,%20quiero%20mejorar%20mis%20costos.%20Te%20paso%20lo%20que%20estoy%20pagando:" target="_blank" class="btn-secondary">
-                <i class="fab fa-whatsapp"></i> Mejorar mis costos
-            </a>
+            <p class="hero-subtitle">
+                <strong>Mejorá tus costos — Maximizá tus ganancias</strong><br>
+                Pasame el precio que estás pagando y te hago uno mejor.<br>
+                <span>Armamos tu pedido personalizado según tu presupuesto. ¡Podés arrancar con solo $35.000!</span>
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#catalogo" class="btn-primary">Ver catálogo</a>
+                <a href="https://wa.me/5493865389429?text=Hola%20Nahuel,%20quiero%20mejorar%20mis%20costos.%20Te%20paso%20lo%20que%20estoy%20pagando:" target="_blank" class="btn-secondary">
+                    <i class="fab fa-whatsapp"></i> Mejorar mis costos
+                </a>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+
     <!-- Categorías Destacadas -->
-              <div class="categories-grid">
+    <section id="categorias" class="categories-section">
+        <div class="container">
+            <h2 class="section-title">Nuestras Categorías</h2>
+            <div class="categories-grid">
                 <div class="category-card" data-filter="Perfumes 100ml">
                     <i class="fas fa-spray-can"></i>
                     <h3>Perfumes 100ml</h3>
@@ -88,20 +92,21 @@
                     <h3>Otros</h3>
                 </div>
             </div>
+        </div>
     </section>
 
     <!-- Catálogo de Productos -->
     <section id="catalogo" class="catalog-section">
         <div class="container">
             <h2 class="section-title">Catálogo de Productos</h2>
-            
+
             <div class="catalog-controls">
                 <div class="search-bar">
                     <input type="text" id="searchInput" placeholder="Buscar productos...">
                     <i class="fas fa-search"></i>
                 </div>
-                
-                                <div class="filters">
+
+                <div class="filters">
                     <button class="filter-btn active" data-filter="Todos">Todos</button>
                     <button class="filter-btn" data-filter="Perfumes 100ml">Perfumes 100ml</button>
                     <button class="filter-btn" data-filter="Perfumes 50ml">Perfumes 50ml</button>
@@ -114,36 +119,37 @@
                     <button class="filter-btn" data-filter="Otros">Otros</button>
                 </div>
             </div>
-                            <div class="brands-section">
-                    <h3 class="brands-title">Marcas de Perfumes</h3>
-                    <div class="brand-filters">
-                        <button class="brand-btn active" data-brand="Todas">Todas</button>
-                        <button class="brand-btn" data-brand="Jean Paul Gaultier">Jean Paul Gaultier</button>
-                        <button class="brand-btn" data-brand="Afnan">Afnan</button>
-                        <button class="brand-btn" data-brand="Al Haramain">Al Haramain</button>
-                        <button class="brand-btn" data-brand="Armaf">Armaf</button>
-                        <button class="brand-btn" data-brand="Bharara">Bharara</button>
-                        <button class="brand-btn" data-brand="Rasasi">Rasasi</button>
-                        <button class="brand-btn" data-brand="Lattafa">Lattafa</button>
-                        <button class="brand-btn" data-brand="Xerjoff">Xerjoff</button>
-                        <button class="brand-btn" data-brand="Valentino">Valentino</button>
-                        <button class="brand-btn" data-brand="French Avenue">French Avenue</button>
-                        <button class="brand-btn" data-brand="Creed">Creed</button>
-                    </div>
-                </div>
 
-                <div class="fragances-banner" id="fragancesBanner" style="display:none;">
-                Contamos con más de 50 fragancias disponibles — ¡Consultanos por la que buscás!
+            <div class="brands-section">
+                <h3 class="brands-title">Marcas de Perfumes</h3>
+                <div class="brand-filters">
+                    <button class="brand-btn active" data-brand="Todas">Todas</button>
+                    <button class="brand-btn" data-brand="Jean Paul Gaultier">Jean Paul Gaultier</button>
+                    <button class="brand-btn" data-brand="Afnan">Afnan</button>
+                    <button class="brand-btn" data-brand="Al Haramain">Al Haramain</button>
+                    <button class="brand-btn" data-brand="Armaf">Armaf</button>
+                    <button class="brand-btn" data-brand="Bharara">Bharara</button>
+                    <button class="brand-btn" data-brand="Rasasi">Rasasi</button>
+                    <button class="brand-btn" data-brand="Lattafa">Lattafa</button>
+                    <button class="brand-btn" data-brand="Xerjoff">Xerjoff</button>
+                    <button class="brand-btn" data-brand="Valentino">Valentino</button>
+                    <button class="brand-btn" data-brand="French Avenue">French Avenue</button>
+                    <button class="brand-btn" data-brand="Creed">Creed</button>
                 </div>
+            </div>
+
+            <div class="fragances-banner" id="fragancesBanner" style="display:none;">
+                Contamos con más de 50 fragancias disponibles — ¡Consultanos por la que buscás!
+            </div>
+
             <!-- Contenedor donde se inyectan los productos con JS -->
             <div class="products-grid" id="productsGrid">
                 <!-- Los productos aparecerán aquí -->
-
             </div>
         </div>
     </section>
 
-  <!-- Sección de Información (Enfoque Mayorista) -->
+    <!-- Sección de Información (Enfoque Mayorista) -->
     <section class="info-section">
         <div class="container">
             <div class="info-content">
@@ -153,7 +159,7 @@
         </div>
     </section>
 
-  <!-- Contacto -->
+    <!-- Contacto -->
     <section id="contacto" class="contact-section">
         <div class="container">
             <h2 class="section-title">Contacto</h2>
@@ -200,11 +206,13 @@
                 <a href="https://instagram.com/nahuelimportador" target="_blank"><i class="fab fa-instagram"></i></a>
                 <a href="#"><i class="fab fa-facebook"></i></a>
             </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 Nahuel Importador. Todos los derechos reservados.</p>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Nahuel Importador. Todos los derechos reservados.</p>
+            </div>
         </div>
     </footer>
-        <!-- Ventana flotante "No ves tu perfume" -->
+
+    <!-- Ventana flotante "No ves tu perfume" -->
     <div class="perfume-request-popup" id="perfumeRequestPopup">
         <button class="popup-close" id="popupClose">&times;</button>
         <p class="popup-text">¿No ves tu perfume? <strong>¡Contanos y te lo conseguimos!</strong></p>
@@ -217,7 +225,8 @@
     <a href="https://wa.me/5493865389429?text=Hola%20Nahuel%20Importador,%20vengo%20desde%20la%20página%20web%20y%20quiero%20hacer%20una%20consulta." class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
-<!-- Botón Flotante del Carrito -->
+
+    <!-- Botón Flotante del Carrito -->
     <button class="cart-floating-btn" onclick="toggleCartModal()">
         <i class="fas fa-shopping-bag"></i>
         <span id="cartCount" class="cart-badge">0</span>
@@ -230,7 +239,7 @@
                 <h3><i class="fas fa-shopping-cart"></i> Tu Pedido</h3>
                 <button class="cart-close-btn" onclick="toggleCartModal()">&times;</button>
             </div>
-            
+
             <div id="cartItemsList" class="cart-items-list">
                 <!-- Se llena dinámicamente desde JS -->
             </div>
@@ -242,6 +251,7 @@
             </div>
         </div>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>

@@ -7,15 +7,26 @@ function toggleCartModal() {
     }
 }
 
-// Agregar producto al carrito
-function addToCart(id, name) {
+function addToCart(id, name, qty = 1) {
+    qty = parseInt(qty) || 1;
+    if (qty < 1) qty = 1;
+
     const existing = cart.find(item => item.id === id);
     if (existing) {
-        existing.quantity += 1;
+        existing.quantity += qty;
     } else {
-        cart.push({ id, name, quantity: 1 });
+        cart.push({ id, name, quantity: qty });
     }
     updateCartUI();
+}
+
+function adjustQtyInput(inputId, delta) {
+    const input = document.getElementById(inputId);
+    if (!input) return;
+    let val = parseInt(input.value) || 1;
+    val += delta;
+    if (val < 1) val = 1;
+    input.value = val;
 }
 
 // Modificar cantidad (+ / -)
@@ -154,6 +165,62 @@ const products = [
         ],
         image: "img/ELFBARIceKing40kDragonStrawnana.jpg",
         available: true
+    },
+        {
+        id: "testers-60ml-general",
+        name: "Testers 60ml (Surtidos)",
+        category: "Testers 60ml",
+        image: "img/Testers60ml.jpeg",
+        description: "Marcas y modelos con stock variable — consultanos disponibilidad.",
+        isSpecial30ml: true,
+        prices: [
+            { qty: "1 Unidad", price: "$22.000" },
+            { qty: "2 Unidades", price: "$20.000 c/u" },
+            { qty: "5 Unidades", price: "$16.000 c/u" },
+            { qty: "10 Unidades", price: "$15.000 c/u" },
+            { qty: "20 Unidades", price: "$14.000 c/u", highlight: true }
+        ]
+    },
+    {
+        id: "elfbar-te6000",
+        name: "Elfbar TE6000",
+        category: "Vapers",
+        image: "img/ElfbarTe6000.jpeg",
+        description: "Sabores variables — consultanos disponibilidad.",
+        isSpecial30ml: true,
+        prices: [
+            { qty: "1 Unidad", price: "$10.000" },
+            { qty: "5 Unidades", price: "$7.000 c/u", highlight: true }
+        ]
+    },
+    {
+        id: "pyne-pod-10k",
+        name: "Pyne Pod 10k",
+        category: "Vapers",
+        image: "img/PynePod10k.jpeg",
+        description: "Sabores variables — consultanos disponibilidad.",
+        isSpecial30ml: true,
+        prices: [
+            { qty: "1 Unidad", price: "$12.000" },
+            { qty: "2 Unidades", price: "$10.000 c/u" },
+            { qty: "5 Unidades", price: "$9.000 c/u" },
+            { qty: "10 Unidades", price: "$8.000 c/u", highlight: true }
+        ]
+    },
+    {
+        id: "ebcreate-bc-pro-40k",
+        name: "EB Create BC Pro 40k",
+        category: "Vapers",
+        image: "img/EbcreateBcPro40k.jpeg",
+        description: "Sabores variables — consultanos disponibilidad.",
+        isSpecial30ml: true,
+        prices: [
+            { qty: "1 Unidad", price: "$25.000" },
+            { qty: "5 Unidades", price: "$21.000 c/u" },
+            { qty: "10 Unidades", price: "$19.000 c/u" },
+            { qty: "20 Unidades", price: "$18.000 c/u" },
+            { qty: "40 Unidades", price: "$16.500 c/u", highlight: true }
+        ]
     },
     {
         id: 80,
@@ -1040,7 +1107,12 @@ const renderProducts = (productsToRender) => {
                         <div class="wholesale-prices-big">
                             ${pricesHTML}
                         </div>
-<button onclick="addToCart('${product.id}', '${product.name}')" class="btn-add-cart">
+<div class="qty-selector">
+                    <button type="button" onclick="adjustQtyInput('qty-${product.id}', -1)">-</button>
+                    <input type="number" id="qty-${product.id}" class="qty-input" value="1" min="1">
+                    <button type="button" onclick="adjustQtyInput('qty-${product.id}', 1)">+</button>
+                </div>
+                <button onclick="addToCart('${product.id}', '${product.name}', document.getElementById('qty-${product.id}').value)" class="btn-add-cart">
                     <i class="fas fa-cart-plus"></i> Agregar al Pedido
                 </button>
         
@@ -1069,10 +1141,16 @@ const renderProducts = (productsToRender) => {
                 ${renderWholesale(product)}
 
                 <p class="product-status ${statusClass}"><i class="fas fa-circle" style="font-size:8px; vertical-align:middle; margin-right:5px;"></i>${statusText}</p>
-                <button onclick="addToCart('${product.id || product.name}', '${product.name}')" class="btn-add-cart">
-    <i class="fas fa-cart-plus"></i> Agregar al Pedido
-</button>
-            </div>
+               
+            </div> 
+                           <div class="qty-selector">
+                    <button type="button" onclick="adjustQtyInput('qty-${product.id}', -1)">-</button>
+                    <input type="number" id="qty-${product.id}" class="qty-input" value="1" min="1">
+                    <button type="button" onclick="adjustQtyInput('qty-${product.id}', 1)">+</button>
+                </div>
+                <button onclick="addToCart('${product.id || product.name}', '${product.name}', document.getElementById('qty-${product.id}').value)" class="btn-add-cart">
+                    <i class="fas fa-cart-plus"></i> Agregar al Pedido
+                </button>
         `;
         productsGrid.appendChild(card);
 
